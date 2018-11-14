@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Dima Ivlev](https://up.htmlacademy.ru/htmlcss/23/user/238101).
-* Наставник: `Денис Байдаров`.
+* Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er).
 
 ---
 
