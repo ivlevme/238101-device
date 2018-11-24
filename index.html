@@ -5,20 +5,25 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
+    
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">DEVICE</a>
-        <!-- Поиск по сайту  -->
+        <form class="main-search" action="https://echo.htmlacademy.ru"
+          method="get">
+          <input type="search" name="search" value=""
+            placeholder="Поиск по сайту">
+        </form>
         <ul class="user-navigation">
-          <li class="login-link"><a href="#">Вход</a></li>
+          <li class="login-link"><a href="login.html">Вход</a></li>
         </ul>
         <ul class="user-shopping">
-          <li class="comparison"><a href="#">Сравнить</a></li>
-          <li class="cart"><a href="#">Корзина</a></li>
+          <li class="comparison"><a href="comparison.html">Сравнить</a></li>
+          <li class="cart"><a href="cart.html">Корзина</a></li>
         </ul>
         <ul class="site-navigation">
           <li>
-            <a href="#">Каталог товаров</a>
+            <a href="catalog.html">Каталог товаров</a>
               <ul>
                 <li><a href="#">Виртуальная реальность</a></li>
                 <li><a href="#">Моноподы для селфи</a></li>
@@ -36,12 +41,9 @@
     </header>
 
     <main class="container">
-
       <h1 class="visually-hidden">Интернет - магазин гаджетов «Девайс»</h1>
-
       <section class="main-slider">
         <!-- Содержимое слайдера формы  -->
-
         <div class="slide">
           <b>Делай селфи, как Бен Стиллер! </b>
           <img src="img\slider-1.png" width = "384" height = "486"
@@ -62,7 +64,6 @@
             </tr>
           </table>
         </div>
-
         <div class="slide">
           <!-- Содержимое слайдера формы  -->
           <b>Худеем правильно!</b>
@@ -80,7 +81,6 @@
             </tr>
           </table>
         </div>
-
         <div class="slide">
           <!-- Содержимое слайдера формы  -->
           <b>Порхает как бабочка, жалит как пчела!</b>
@@ -100,12 +100,10 @@
             </tr>
           </table>
         </div>
-
       </section>
 
       <section class="category-products">
         <ul class="category-container">
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -115,7 +113,6 @@
               <p>Виртуальная реальность</p>
             </a>
           </li>
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -125,7 +122,6 @@
               <p>Моноподы для селфи</p>
             </a>
           </li>
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -135,7 +131,6 @@
               <p>Экшн-камеры</p>
             </a>
           </li>
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -145,7 +140,6 @@
               <p>Фитнес-браслеты</p>
             </a>
           </li>
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -155,7 +149,6 @@
               <p>Умные часы</p>
             </a>
           </li>
-
           <li>
             <a href="#">
               <div class="product-container">
@@ -165,13 +158,11 @@
               <p>Квадрокоптеры</p>
             </a>
           </li>
-
         </ul>
       </section>
 
       <section class="services">
         <div class="slider">
-
           <div class="controls">
             <ul>
               <li class="controls-delivery">Доставка</li>
@@ -179,7 +170,6 @@
               <li class="controls-credit">Кредит</li>
             </ul>
           </div>
-
           <div class="description">
             <div class="description-delivery">
               <h2>Доставка</h2>
@@ -188,7 +178,6 @@
                 поднимая его на ваш этаж.</p>
               <img src="img/delivery.svg" width="136" height="164" alt="Доставка">
             </div>
-
             <div class="description-guarantee">
               <h2>Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом
@@ -196,7 +185,6 @@
                 конечно же.</p>
               <img src="img/warranty.svg" width="171" height="195" alt="Гарантия">
             </div>
-
             <div class="description-credit">
               <h2>Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты
@@ -205,29 +193,23 @@
               <img src="img/credit.svg" width="156" height="188" alt="Кредит">
             </div>
           </div>
-
         </div>
       </section>
 
       <section class="logotypes">
         <ul>
-
           <li>
             <a href="#"><img src="img/logo-1.jpg" width="260" height="100" alt="dji"></a>
           </li>
-
           <li>
             <a href="#"><img src="img/logo-2.jpg" width="260" height="100" alt="SP Gadgets"></a>
           </li>
-
           <li>
             <a href="#"><img src="img/logo-3.jpg" width="260" height="100" alt="GoPro"></a>
           </li>
-
           <li>
             <a href="#"><img src="img/logo-4.jpg" width="260" height="100" alt="vive"></a>
           </li>
-
         </ul>
       </section>
 
@@ -252,10 +234,8 @@
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить
           работоспособность покупки. Всякое бывает.
         </p>
-        <!-- Карта  -->
-        <a href="#"><img src="img/map.jpg" width="560" height="224" alt="Карта расположения
-            офиса по адресу
-            ул. Строителей, 15"></a>
+        <a href="#"><img src="img/map.jpg" width="560" height="224" alt="Офис
+          компании по адресу ул. Строителей 15"></a>
         <a class="button" href="#">Напишите нам</a>
       </section>
 
@@ -291,15 +271,36 @@
         </p>
       </footer>
 
-      <section class="feedback">
+      <section class="modal modal-feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
-        <!-- Здесь будет форма -->
-        <span class="feedback-close">x</span>
+        <form class="feedback-form" action="https://echo.htmlacademy.ru"
+          method="post">
+          <p class="feedback-item">
+            <label for="feedback-name">Ваше Имя:</label>
+            <input id="feedback-name" type="text" name="name" value=""
+            placeholder="Имя Фамилия">
+          </p>
+          <p class="feedback-item">
+            <label for="feedback-email">Ваш e-mail:</label>
+            <input id="feedback-email" type="email" name="email" value=""
+            placeholder="email@example.com">
+          </p>
+          <p class="feedback-item">
+            <label for="feedback-letter">Текст письма:</label>
+            <!-- <input id="feedback-letter" type="" name="letter" value=""
+            placeholder="В свободной форме"> -->
+            <textarea id="feedback-letter" name="letter" rows="8" cols="80" placeholder="В свободной форме"></textarea>
+          </p>
+          <button class="button" type="submit">Отправить</button>
+        </form>
+        <button class="modal-close" type="button">Закрыть</button>
       </section>
 
-      <section class="map">
-        <!-- Здесь будет карта -->
-        <span class="map-close">x</span>
+      <section class="modal modal-map">
+        <h2 class="visually-hidden">Как до нас добраться</h2>
+        <img src="img\map-big.jpg" width="960" height="559" alt="Офис компании
+          по адресу ул. Строителей 15">
+        <button class="modal-close" type="button">Закрыть</button>
       </section>
 
     </main>
