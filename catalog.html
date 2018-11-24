@@ -8,7 +8,11 @@
     <header class="main-header">
       <nav class="main-navigation">
         <a class="main-header-logo">DEVICE</a>
-        <!-- Поиск по сайту  -->
+        <form class="main-search" action="https://echo.htmlacademy.ru"
+          method="get">
+          <input type="search" name="search" value=""
+            placeholder="Поиск по сайту">
+        </form>
         <ul class="user-navigation">
           <li class="authorized-user"><a href="#">Валентин Петухов</a></li>
           <li class="exit"><a href="#">Выйти</a></li>
@@ -45,8 +49,56 @@
       </ul>
 
       <section class="filters">
-        <!-- <h2>Фильтр: </h2> -->
-          <!-- Здесь будет форма -->
+        <h2>Фильтр:</h2>
+        <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
+          <!-- стоимость -->
+          <fieldset class="filter-color">
+            <legend>Цвет</legend>
+            <ul>
+              <li class="filter-option">
+                <input id="filter-black" class="visually-hidden filter-input
+                  filter-input-checkbox" type="checkbox" name="black" value="" checked>
+                <label for="filter-black">Черный</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-white" class="visually-hidden filter-input
+                  filter-input-checkbox" type="checkbox" name="white" value="">
+                <label for="filter-white">Белый</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-blue" class="visually-hidden filter-input
+                  filter-input-checkbox" type="checkbox" name="blue" value="" checked>
+                <label for="filter-blue">Синий</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-red" class="visually-hidden filter-input
+                  filter-input-checkbox" type="checkbox" name="red" value="" checked>
+                <label for="filter-red">Красный</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-pink" class="visually-hidden filter-input
+                  filter-input-checkbox" type="checkbox" name="pink" value="">
+                <label for="filter-pink">Розовый</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-bluetooth">
+            <legend>Bluetooth</legend>
+            <ul>
+              <li class="filter-option">
+                <input id="filter-yes" class="visually-hidden filter-input
+                  filter-input-checkbox" type="radio" name="bluetooth-yes" value="" checked>
+                <label for="filter-yes">Есть</label>
+              </li>
+              <li class="filter-option">
+                <input id="filter-no" class="visually-hidden filter-input
+                  filter-input-checkbox" type="radio" name="bluetooth-no" value="">
+                <label for="filter-no">Нет</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button filter-button" type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="catalog">
