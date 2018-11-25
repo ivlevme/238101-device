@@ -52,9 +52,9 @@
         <h2>Фильтр:</h2>
         <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
           <!-- стоимость -->
-          <fieldset class="filter-color">
+          <fieldset>
             <legend>Цвет</legend>
-            <ul>
+            <ul class="filter-color">
               <li class="filter-option">
                 <input id="filter-black" class="visually-hidden filter-input
                   filter-input-checkbox" type="checkbox" name="black" value="" checked>
@@ -82,17 +82,17 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="filter-bluetooth">
+          <fieldset>
             <legend>Bluetooth</legend>
-            <ul>
+            <ul class="filter-bluetooth">
               <li class="filter-option">
                 <input id="filter-yes" class="visually-hidden filter-input
-                  filter-input-checkbox" type="radio" name="bluetooth-yes" value="" checked>
+                  filter-input-radio" type="radio" name="bluetooth" value="yes" checked>
                 <label for="filter-yes">Есть</label>
               </li>
               <li class="filter-option">
                 <input id="filter-no" class="visually-hidden filter-input
-                  filter-input-checkbox" type="radio" name="bluetooth-no" value="">
+                  filter-input-radio" type="radio" name="bluetooth" value="no">
                 <label for="filter-no">Нет</label>
               </li>
             </ul>
