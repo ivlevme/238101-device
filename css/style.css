@@ -543,6 +543,8 @@ html { box-sizing: border-box; }
   padding: 0px;
   min-height: 70px;
 
+  margin-top: -10px;
+
   background-color: #ebebeb;
 }
 
