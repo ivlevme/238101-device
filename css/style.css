@@ -248,31 +248,15 @@ html { box-sizing: border-box; }
     padding: 0;
   }
 
-  .dropdown-list li:nth-child(1) {
-    order:1 ;
-  }
-
-  .dropdown-list li:nth-child(2) {
-    order:4 ;
-  }
-
-  .dropdown-list li:nth-child(3) {
-    order:6 ;
-    margin-right: 500px;
-  }
-
-  .dropdown-list li:nth-child(4) {
-    order:2 ;
-  }
-
   .dropdown-list li:nth-child(5) {
     margin-right: 160px;
-    order:5;
   }
 
-  .dropdown-list li:nth-child(6) {
-    order:3;
+  .dropdown-list li:nth-child(1),
+  .dropdown-list li:nth-child(4) {
+    margin-right: 40px;
   }
+
 
   .main-list:hover .dropdown-list {
     display: flex;
