@@ -242,32 +242,38 @@ html { box-sizing: border-box; }
   list-style: none;
   }
 
+
   .dropdown-list li {
     width: 200px;
     margin: 0;
     padding: 0;
   }
 
-  .dropdown-list li:nth-child(5) {
+  /* .dropdown-list li:nth-child(5) {
     margin-right: 160px;
   }
 
   .dropdown-list li:nth-child(1),
   .dropdown-list li:nth-child(4) {
     margin-right: 40px;
-  }
+  } */
+
 
 
   .main-list:hover .dropdown-list {
     display: flex;
     flex-wrap: wrap;
 
-    width: 640px;
+    width: 660px;
 
     margin: 0px;
     padding: 0px;
 
     padding-top: 22px;
+  }
+
+  .dropdown-list .left-column {
+    margin-right: 40px;
   }
 
 .index-columns {
