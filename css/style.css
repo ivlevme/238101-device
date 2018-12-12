@@ -113,7 +113,7 @@ html { box-sizing: border-box; }
   position: relative;
 }
 
-.button:focus p {
+.button:focus span {
   opacity: 0.3;
 }
 
@@ -151,7 +151,7 @@ html { box-sizing: border-box; }
   opacity: 1;
 }
 
-.button p {
+.button span {
   margin: 0px;
   padding: 0px;
 }
@@ -234,7 +234,7 @@ html { box-sizing: border-box; }
 .main-search button {
   font-family: "Open Sans Light", Arial, sans-serif;
   font-size: 15px;
-  font-weight: 30px;
+  line-height: 30px;
 
   display: none;
   background-color: transparent;
@@ -328,11 +328,16 @@ html { box-sizing: border-box; }
   list-style: none;
   }
 
+  .dropdown-list ul {
+    margin: 0;
+    padding: 0;
+  }
 
   .dropdown-list li {
     width: 200px;
     margin: 0;
     padding: 0;
+    list-style: none;
   }
 
   .main-list:hover .dropdown-list {
@@ -340,14 +345,14 @@ html { box-sizing: border-box; }
     flex-wrap: wrap;
 
     position: absolute;
-    top: 40px;
+    top: 20px;
     left: -60px;
 
     width: 1160px;
 
     margin: 0px;
     padding: 0px;
-    padding-top: 5px;
+    padding-top: 25px;
     padding-left: 60px;
     padding-bottom: 32px;
 
@@ -484,6 +489,11 @@ html { box-sizing: border-box; }
   opacity: 0.3;
 }
 
+.catalog-wrapper {
+  width: 100%;
+ background-image: linear-gradient(to right,#eeeeee 0%, #eeeeee 20%, #fff 20%, #fff 100%);
+}
+
 .catalog-columns {
     display: flex;
 
@@ -493,6 +503,8 @@ html { box-sizing: border-box; }
 .filters {
   width: 330px;
   box-sizing: border-box;
+  background-color: #eeeeee;
+  z-index: 0;
 }
 
 .filters h2 {
@@ -513,6 +525,20 @@ html { box-sizing: border-box; }
 
 .filters fieldset {
   border: none;
+
+  position: relative;
+}
+
+.filters fieldset::before {
+  content: "";
+
+  position: absolute;
+  top:-12px;
+
+  width: 200px;
+  height: 2px;
+
+  background-color: #000;
 }
 
 .filters legend {
@@ -528,7 +554,91 @@ html { box-sizing: border-box; }
 .filters .filter-option {
   padding: 0px;
   margin: 0px;
-  margin-left: 35px;
+  padding-left: 35px;
+
+  position: relative;
+}
+
+.filter-option label {
+  cursor: pointer;
+  user-select: none;
+}
+
+ .filter-input-checkbox + label::before {
+  content: "";
+
+  position: absolute;
+  top: 5px;
+  left: -5px;
+
+  width: 30px;
+  height: 30px;
+
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.filter-input-checkbox:checked + label::before {
+ content: "";
+
+ position: absolute;
+ top: 5px;
+ left: -3px;
+
+ width: 30px;
+ height: 30px;
+
+ background-image: url(../img/checkbox-on.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.filter-input-checkbox:disabled + label {
+  opacity: 0.25;
+}
+
+label:hover::before {
+  opacity: 0.6;
+}
+
+label:active::before {
+  opacity: 1;
+}
+
+
+.filter-input-radio + label::before {
+ content: "";
+
+ position: absolute;
+ top: 5px;
+ left: -5px;
+
+ width: 30px;
+ height: 30px;
+
+ background-image: url(../img/radio-off.svg);
+ background-repeat: no-repeat;
+ background-position: center;
+}
+
+.filter-input-radio:checked + label::before {
+content: "";
+
+position: absolute;
+top: 5px;
+left: -5px;
+
+width: 30px;
+height: 30px;
+
+background-image: url(../img/radio-on.svg);
+background-repeat: no-repeat;
+background-position: center;
+}
+
+.filter-input-radio:disabled + label {
+  opacity: 0.25;
 }
 
 .filters fieldset:first-child {
@@ -537,7 +647,6 @@ html { box-sizing: border-box; }
 
 .filters .button {
   margin-top: 28px;
-  margin-left: 50px;
 }
 
 
@@ -561,9 +670,13 @@ html { box-sizing: border-box; }
 
 .filter-button {
   font-size: 18px;
-  line-height: auto;
   letter-spacing: 3px;
   text-transform: uppercase;
+
+  width: 200px;
+
+  margin-left: 20px;
+  padding: 0;
 
   background-color:transparent;
   border: none;
@@ -607,13 +720,54 @@ html { box-sizing: border-box; }
 .catalog-list li {
 }
 
-/* .catalog-list li:nth-child(3),
-.catalog-list li:nth-child(4) {
-  margin-bottom: 0px;
-} */
-
 .catalog-item {
   font-size: 0px;
+}
+
+.catalog-item-add {
+  display: none;
+
+  width: 360px;
+  height: 380px;
+}
+
+.catalog-item-add .button {
+  margin-top: 180px;
+  margin-left: 80px;
+
+  width: 200px;
+}
+
+.catalog-item-add .button::before {
+  margin-left: 2px;
+}
+
+.catalog-item-add .compare-add {
+  display: block;
+  margin-left: 110px;
+  margin-top: 12px;
+
+  font-family: "Open Sans Light", Arial, sans-serif ;
+  font-size: 13px;
+  line-height: 36px;
+  opacity: 0.5;
+}
+
+.compare-add:hover {
+  opacity: 1;
+}
+
+.compare-add:focus {
+  opacity: 0.2;
+}
+
+.catalog-item:hover > .catalog-item-add {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background-color: rgba(238,238,238,0.7);
+
+  cursor: pointer;
 }
 
 .catalog-item h3 {
@@ -634,6 +788,21 @@ html { box-sizing: border-box; }
   display: block;
   background-color: #eeeeee;
   list-style: none;
+}
+
+.pagination-item-sort ul {
+  justify-content: space-around;
+  display: flex;
+
+  box-sizing: border-box;
+  padding-left: 25px;
+  width: 140px;
+}
+
+
+.pagination-item-sort ul {
+  margin: 0;
+  padding: 0;
 }
 
 .pagination-item-sort a {
@@ -666,15 +835,6 @@ html { box-sizing: border-box; }
   background-color: #ebebeb;
 }
 
-
-.pagination-item-sort {
-  justify-content: space-around;
-  display: flex;
-
-  box-sizing: border-box;
-  padding-left: 25px;
-  width: 140px;
-}
 
 .pagination-back {
   /* margin-left: 28px; */
@@ -1022,6 +1182,19 @@ html { box-sizing: border-box; }
   font-size: 14px;
   line-height: 18px;
   color: #464646;
+  font-weight: 700;
+
+  opacity: 0.4;
+}
+
+.modal-feedback input:-moz-placeholder {
+  font-family: "Open Sans Regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+  font-weight: 700;
+
+  opacity: 0.4;
 }
 
 .modal-feedback textarea {
@@ -1042,6 +1215,19 @@ html { box-sizing: border-box; }
   font-size: 14px;
   line-height: 18px;
   color: #464646;
+  font-weight: 700;
+
+  opacity: 0.4;
+}
+
+.modal-feedback textarea:-moz-placeholder {
+  font-family: "Open Sans Regular";
+  font-size: 14px;
+  line-height: 18px;
+  color: #464646;
+  font-weight: 700;
+
+  opacity: 0.4;
 }
 
 .middle-feedback {
@@ -1161,6 +1347,8 @@ html { box-sizing: border-box; }
 
   position: absolute;
   left: 225px;
+  top: -3px;;
+
   width: 23px;
   height: 23px;
 
