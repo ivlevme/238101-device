@@ -142,9 +142,6 @@ html { box-sizing: border-box; }
 
   position: absolute;
   top: -10px;
-
-  background-color: #f0c52e;
-  z-index: -1;
 }
 
 .button:focus::before {
@@ -598,11 +595,11 @@ html { box-sizing: border-box; }
   opacity: 0.25;
 }
 
-label:hover::before {
+.filters label:hover::before {
   opacity: 0.6;
 }
 
-label:active::before {
+.filters label:active::before {
   opacity: 1;
 }
 
@@ -722,19 +719,29 @@ background-position: center;
 
 .catalog-item {
   font-size: 0px;
+
+  position: relative;
 }
 
 .catalog-item-add {
-  display: none;
+  position: absolute;
+  top:0;
+  left: 0;
 
-  width: 360px;
+  z-index: -1;
   height: 380px;
+  width: 360px;
+  background-color: rgba(238,238,238,0.7);
+}
+
+.catalog-item-add:hover {
+  position: absolute;
+  z-index: 2;
 }
 
 .catalog-item-add .button {
-  margin-top: 180px;
   margin-left: 80px;
-
+  margin-top: 180px;
   width: 200px;
 }
 
@@ -761,10 +768,10 @@ background-position: center;
   opacity: 0.2;
 }
 
-.catalog-item:hover > .catalog-item-add {
-  display: block;
-  position: absolute;
-  z-index: 2;
+.catalog-item-wrapper:hover + .catalog-item-add {
+  top:0;
+  left: 0;
+  z-index: 0;
   background-color: rgba(238,238,238,0.7);
 
   cursor: pointer;
@@ -1131,21 +1138,30 @@ background-position: center;
 }
 
 .modal-feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  display: none;
+
   width: 960px;
+  min-height:552px;
   box-sizing: border-box;
 
-  margin: 0 auto;
   padding-top: 1px;
   padding-bottom: 1px;
-  margin-top: 100px;
+  margin-top: -276px;
+  margin-left: -480px;
 
-  box-shadow: 0 10px 20px 0px rgba(4,6,6,0.2);
+  background-color: #fff;
+  box-shadow: 0 8px 20px 0px rgba(4,6,6,0.2);
 }
 
 .feedback-form {
   width: 760px;
   margin: 0 auto;
-  margin-top: 85px;
+  margin-top: 88px;
 }
 
 .feedback-top {
@@ -1267,17 +1283,23 @@ background-position: center;
 }
 
 .feedback-close {
-  top: 15px;
-  right: 15px;
+  top: 20px;
+  right: 16px;
 }
 
 .modal-map {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+
+  display: none;
+
   width: 960px;
   height: 559px;
 
-  margin: 0 auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
+  margin-top: -279.5px;
+  margin-left: -480px;
 
   box-shadow: 0 10px 20px 0px rgba(4,6,6,0.2);
 }
