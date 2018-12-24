@@ -54,31 +54,45 @@
         </div>
         <ul class="site-navigation">
           <li class="main-list">
-            <a class="main-links-state" href="catalog.html">Каталог товаров</a>
+            <a class="main-links-state" href="#">Каталог товаров</a>
             <ul class="dropdown-list">
               <li class="left-column">
                 <ul>
-                  <li><a class="main-links-state" href="#">Виртуальная реальность</a></li>
+                  <li>
+                    <a class="main-links-state" href="vr.html">Виртуальная реальность</a>
+                  </li>
                   <li><a class="main-links-state" href="#">Моноподы для селфи</a></li>
-                  <li><a class="main-links-state" href="#">Экшн-камеры</a></li>
+                  <li>
+                    <a class="main-links-state" href="cameras.html">Экшн-камеры</a>
+                  </li>
                 </ul>
               </li>
               <li class="center-column">
                 <ul>
-                  <li><a class="main-links-state" href="#">Фитнеc-браслеты</a></li>
-                  <li><a class="main-links-state" href="#">Умные часы</a></li>
+                  <li>
+                    <a class="main-links-state" href="fitness.html">Фитнеc-браслеты</a>
+                  </li>
+                  <li>
+                    <a class="main-links-state" href="watch.html">Умные часы</a>
+                  </li>
                 </ul>
               </li>
               <li class="right-column">
                 <ul>
-                  <li><a class="main-links-state" href="#">Квадрокоптеры</a></li>
+                  <li>
+                    <a class="main-links-state" href="quadcopters.html">Квадрокоптеры</a>
+                  </li>
                 </ul>
               </li>
             </ul>
           </li>
-          <li><a class="main-links-state" href="#">Доставка</a></li>
-          <li class="menu-delivery"><a class="main-links-state" href="#">Гарантия</a></li>
-          <li class="menu-contacts"><a class="main-links-state" href="#">Контакты</a></li>
+          <li><a class="main-links-state" href="delivery.html">Доставка</a></li>
+          <li class="menu-delivery">
+            <a class="main-links-state" href="guarantee.html">Гарантия</a>
+          </li>
+          <li class="menu-contacts">
+            <a class="main-links-state" href="contact.html">Контакты</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -92,12 +106,42 @@
           <li class="breadcrumbs-current">Моноподы для селфи</li>
         </ul>
       </div>
+      <div class="title-wrapper">
+        <section class="catalog-title wrapper-center">
+          <h2>Фильтр:</h2>
+          <div class="sorting">
+            <h3>Сортировка:</h3>
+            <ul class="sort-wrapper">
+              <li><a class="sort-active" href="#">По цене</a></li>
+              <li><a href="#">По типу</a></li>
+              <li><a href="#">По популярности</a></li>
+            </ul>
+          </div>
+        </section>
+      </div>
       <div class="catalog-wrapper">
         <div class="catalog-columns wrapper-center">
+          <div class="column-wrapper">
           <section class="filters">
-            <h2>Фильтр:</h2>
             <form class="filter-form" method="get" action="https://echo.htmlacademy.ru">
-              <!-- стоимость -->
+                <fieldset class="filter-item">
+                  <legend>Стоимость</legend>
+                  <div class="range-filter">
+                    <div class="range-controls">
+                      <div class="scale">
+                        <div class="bar"></div>
+                      </div>
+                      <div class="toggle toggle-min"></div>
+                      <div class="toggle toggle-max"></div>
+                    </div>
+                    <div class="price-controls">
+                      <input class="price-min-control" id="min-control" name="min-price" type="text" value="0">
+                      <label for="max-control" class="min-price">от</label>
+                      <input class="price-max-control" id="max-control" name="max-price" type="text" value="5000">
+                      <label for="max-control" class="max-price">до</label>
+                    </div>
+                  </div>
+                </fieldset>
               <fieldset>
                 <legend>Цвет</legend>
                 <ul class="filter-color">
@@ -242,13 +286,14 @@
             </ul>
           </section>
         </div>
+        </div>
       </div>
     </main>
 
     <div class="footer-wrapper">
       <footer class="main-footer wrapper-center">
         <div class="footer-top">
-          <a class="main-footer-logo">DEVICE</a>
+          <a class="main-footer-logo main-links-state" href="index.html">DEVICE</a>
           <ul class="footer-user-navigation">
             <li class="authorized-user"><a href="#">
               <svg class="login-link-icon" version="1.1" id="footer-login-link-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -355,6 +400,5 @@
           </div>
         </footer>
       </div>
-
   </body>
 </html>
