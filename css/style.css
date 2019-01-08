@@ -15,7 +15,7 @@
 }
 
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Open Sans Regular";
     src: url("../fonts/opensans.woff2") format("woff2"),
          url("../fonts/opensans.woff") format("woff");
     font-weight: normal;
@@ -23,7 +23,7 @@
 }
 
 @font-face {
-    font-family: "Open Sans";
+    font-family: "Open Sans Light";
     src: url("../fonts/opensanslight.woff2") format("woff2"),
          url("../fonts/opensanslight.woff") format("woff");
     font-weight: 300;
@@ -112,7 +112,7 @@ html { box-sizing: border-box; }
   content: "";
 
   position: absolute;
-  top:7px;
+  top:8px;
   left: 0;
 
   height: 8px;
@@ -2496,6 +2496,10 @@ background-position: center;
 
   border: none;
   background-color: transparent;
+}
+
+.feedback-button::before {
+  top: 8px;
 }
 
 .feedback-button:focus span {
