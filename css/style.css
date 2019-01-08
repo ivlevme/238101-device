@@ -1404,6 +1404,10 @@ html { box-sizing: border-box; }
   color: inherit;
 }
 
+.inner-page .main-links-state .dropdown-list:hover {
+    display: block;
+}
+
 /* Заголовок + хлебные крошки */
 
 .top-wrapper {
